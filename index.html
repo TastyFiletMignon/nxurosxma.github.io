@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WELCOME TO NXUROSXMA</title>
-    <style>
-      body {
-        background-color: black;
-        color: limegreen;
-        font-family: monospace;
-        padding: 40px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>ACCESS POINT LOCATED</h1>
-    <p>Coordinates: 00.0000N / 00.0000W</p>
-    <p>Bootloader handshake: SUCCESS</p>
-    <p>Begin sequence? Y/N</p>
-    <!-- maybe don't click the black pixel in the bottom right corner -->
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>NXUROSXMA CORE</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00FF00;
+      font-family: 'Courier New', monospace;
+      padding: 2em;
+      overflow: hidden;
+    }
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red; }
+      20% { text-shadow: -2px 0 blue; }
+      40% { text-shadow: 2px 2px red; }
+      60% { text-shadow: -2px -2px blue; }
+      80% { text-shadow: 2px 0 red; }
+      100% { text-shadow: none; }
+    }
+    .hidden {
+      color: black;
+      font-size: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="glitch">[SYSTEM ACCESS POINT: NXUROSXMA]</h1>
+  <p>Initial handshake: <span style="color:lime;">ACCEPTED</span></p>
+  <p>Loading directory tree...</p>
+  <p><span class="glitch">/core/data/restricted/root/</span></p>
+
+  <p>> execute("start_sequence.exe")</p>
+
+  <!-- base64 hidden clue: VGhlIHBlcnNvbiB5b3UganVzdCBzcG9va2Ugd2FzIGx5aW5nLiBGaW5kIHRoZW0u -->
+  <div class="hidden">DO NOT LOOK HERE. 🧍</div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "log404.html";
+    }, 8000);
+  </script>
+</body>
 </html>
